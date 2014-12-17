@@ -1,0 +1,13 @@
+.row
+	.col-md-3
+		.well.well-sm
+			ul.nav.nav-list
+				li(ui-sref-active="active")
+					a(ui-sref="products.list") All Products
+
+				li.nav-header 3 Newest Products
+				li(ng-repeat="product in products | orderBy:'id':true | limitTo:3", ui-sref-active="active")
+					a(ui-sref="products.detail({productId:product.id})") {{product.name}}&nbsp;
+						small.pull-right {{product.price | currency:"$"}}
+
+	.col-md-9(ui-view="")

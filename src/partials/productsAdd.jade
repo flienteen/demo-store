@@ -1,0 +1,24 @@
+
+
+.box.comments
+	h5.title Add a new comment
+	form.form-horizontal(role="form", ng-submit="addProduct()")
+		.form-group
+			label.col-sm-2.control-label(for="inputName") Name
+			.col-sm-10
+				input#inputName.form-control(type="text", ng-model="product.name", placeholder="Name", required)
+		.form-group
+			label.col-sm-2.control-label(for="inputPrice") Price
+			.col-sm-10
+				input#inputPrice.form-control(type="number", ng-model="product.price", placeholder="Price", required)
+		.form-group
+			label.col-sm-2.control-label(for="inputDescription") Description
+			.col-sm-10
+				textarea#inputDescription.form-control(ng-model="product.description", placeholder="Description goes here")
+
+		.form-group
+			.col-sm-offset-2.col-sm-10
+				button.btn.btn-default(type="submit") Add it!
+
+
+

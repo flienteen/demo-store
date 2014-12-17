@@ -1,18 +1,60 @@
-.menu
-	list-style none
-	border-bottom 0.1em solid black
-	margin-bottom 2em
-	padding 0 0 0.5em
-	&:before
-		content "["
-	&:after
-		content "]"
-	& > li
-		display inline
-		&:before
-			content "|"
-			padding-right 0.3em
-		&:nth-child(1):before
-			content ""
-			padding 0
+body
+	padding-top 70px
 
+.well
+	margin-top 20px
+
+	.nav-header
+		margin-top 9px
+		padding 3px 15px
+		font-weight bold
+		line-height 20px
+		color #999
+		text-transform uppercase
+	.nav > li > a
+		padding 3px 15px
+
+	.active a, .active ahover
+		color #FFF
+		background-color #08C
+
+.jumbotron
+	padding-top 10px
+	p
+		font-size 16px
+
+
+.box
+	padding 0 20px 20px
+	margin 20px 0
+	border 1px solid #EEE
+	border-left-width 5px
+	border-radius 3px
+
+	&.description
+		border-left-color #5BC0DE
+	&.comments
+		border-left-color #F0AD4E
+	&.no-comments
+		border-left-color #D9534F
+
+	.title
+		margin-left -15px
+		text-transform uppercase
+		font-weight bold
+		color #999
+		cursor default
+
+
+
+.media
+	border 1px solid #CCC
+	border-radius 4px
+	padding 10px
+
+.media-left, .media-right, .media-body
+	display table-cell
+	vertical-align top
+
+.media-left, .media>.pull-left
+	padding-right 10px

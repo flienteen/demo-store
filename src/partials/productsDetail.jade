@@ -1,0 +1,29 @@
+div
+	h2 {{product.name}}&nbsp;
+		small {{product.price | currency:"$"}}
+
+	.box.description
+		h5.title Description
+		p {{product.description}}
+
+	.box.comments(ng-if="comments.length")
+		h5.title Comments
+
+		.media(ng-repeat="comment in comments")
+			.media-left
+				span.glyphicon.glyphicon-comment(aria-hidden="true")
+			.media-body {{comment.content}}
+
+	.box.no-comments(ng-if="!comments.length")
+		h4 No comments yet ;(
+
+	.box
+		h5.title Add a new comment
+		form(ng-submit="addComment()")
+			.row: .col-lg-6
+				.input-group
+					input.form-control(type="text", ng-minlength="2", ng-model="inputContent", required, ng-trim="true")
+					span.input-group-btn
+						button.btn.btn-default(type="submit") Comment!
+
+
